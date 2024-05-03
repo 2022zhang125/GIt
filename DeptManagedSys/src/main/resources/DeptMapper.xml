@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hbsfdxwlxy.competition.mapper.DeptMapper">
+    <select id="selectDeptAll" resultType="com.hbsfdxwlxy.competition.pojo.Dept">
+        select deptno,dname,loc from t_dept;
+    </select>
+    <insert id="addDept">
+        insert into t_dept(deptno,dname,loc) values (#{dept.deptno},#{dept.dname},#{dept.loc});
+    </insert>
+    <delete id="deleteDept">
+        delete from t_dept where deptno = #{deptno};
+    </delete>
+    <update id="doEdit">
+        UPDATE t_dept SET dname = #{dept.dname}, loc = #{dept.loc} WHERE deptno = #{dept.deptno}
+    </update>
+    <select id="doDetail" resultType="com.hbsfdxwlxy.competition.pojo.Dept">
+        select deptno,dname,loc from t_dept where deptno = #{deptno}
+    </select>
+</mapper>

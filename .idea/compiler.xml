@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bank-mvc-mybatis" />
+        <module name="DeptManagedSystem" />
+        <module name="MysqlAccountManaged" />
+        <module name="GenerateInterfaceImpl" />
+        <module name="DeptManagedSys" />
+        <module name="ManagedTest01" />
+        <module name="javassist" />
+        <module name="ManagedSystem" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

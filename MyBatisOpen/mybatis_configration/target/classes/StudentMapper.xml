@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Student's Insert">
+    <!--/*insert into t_student (id,name,xh,sex) values (null,"赵六","3003",'F');*/
+    这里的#{key值}， 比如我们想要插入的是学生的姓名，在Map集合中通过stu找到Student这个类，然后通过 . 去访问他的属性，最后传参。-->
+    <insert id="insertStu">
+        insert into t_student (id,name,xh,sex) values (null,#{stu.name},#{stu.xh},#{stu.sex});
+    </insert>
+    <delete id="deleteStu">
+        delete from t_student where id = #{id}
+    </delete>
+</mapper>

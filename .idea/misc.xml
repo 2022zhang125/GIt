@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/bank-mvc-mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/DeptManagedSys" />
+    <file type="web" url="file://$PROJECT_DIR$/DeptManagedSystem" />
+    <file type="web" url="file://$PROJECT_DIR$/ManagedSystem" />
+    <file type="web" url="file://$PROJECT_DIR$/MysqlAccountManaged" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/bank-mvc-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/javassist/pom.xml" />
+        <option value="$PROJECT_DIR$/GenerateInterfaceImpl/pom.xml" />
+        <option value="$PROJECT_DIR$/MysqlAccountManaged/pom.xml" />
+        <option value="$PROJECT_DIR$/ManagedSystem/pom.xml" />
+        <option value="$PROJECT_DIR$/ManagedTest01/pom.xml" />
+        <option value="$PROJECT_DIR$/DeptManagedSys/pom.xml" />
+        <option value="$PROJECT_DIR$/DeptManagedSystem/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK" />
+</project>

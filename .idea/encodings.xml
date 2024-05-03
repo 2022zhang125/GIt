@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/DeptManagedSys/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DeptManagedSys/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DeptManagedSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DeptManagedSystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GenerateInterfaceImpl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GenerateInterfaceImpl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ManagedSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ManagedSystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ManagedTest01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ManagedTest01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MysqlAccountManaged/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MysqlAccountManaged/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javassist/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javassist/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

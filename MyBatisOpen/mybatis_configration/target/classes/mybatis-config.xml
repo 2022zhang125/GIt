@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties>
+        <!--java.util.Properties类-->
+<!--        <property name="属性名" value="属性值"/>-->
+        <property name="jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbc.url" value="jdbc:mysql://localhost:3306/mybatis"/>
+        <property name="jdbc.username" value="root"/>
+        <property name="jdbc.password" value="123456"/>
+        <!--这里去定义全局的变量，然后在后面的环境配置中使用${}去调用key以获取value，其实类似于EL表达式-->
+    </properties>
+    <!--默认用development所对应的环境，就是在openSession(String ID,String EnvironmentID)-->
+    <environments default="development">
+        <environment id="development">
+            <!--
+                type种类：JDBC，MANAGED
+                JDBC：表示启用JDBC自己的事务管理系统，对事务进行管理
+                MANAGED：表示不再启用JDBC自己的事务管理系统，而是使用第三方的管理系统，如:Spring...
+            -->
+            <transactionManager type="JDBC"/>
+            <!--
+                dataSource:数据源
+                什么是数据源：
+                    1.凡是给程序提供Connection对象的都叫做，数据源
+                    2.数据源实际上是一套规范，只要实现了这一规范的都可以被称之为数据源。
+                    3.JDK中的javax.sql.DataSource接口就是这一规范
+                    4.我们自己编写的数据源组件只要实现了这个接口，比如说连接池，因为提供Connection的都是数据源，所以也要实现这一接口。
+                常见的数据源：
+                    阿里巴巴的德鲁伊连接池
+                    c3p0
+                    dbcp
+                    ......
+                type的类型有哪些？
+                    UNPOOLED：不使用数据库连接池技术，每次请求都是一个新的连接对象
+                    POOLED：使用MyBatis自己实现的连接池技术
+                    JNDI：集成第三方的数据库连接池。
+                        JNDI是一套规范，谁实现了这个规范？大部分的web容器都实现了
+                            eg:Tomcat,Jetty,WebLogic都实现了这个规范。
+                将连接池先配置到web容器中，然后对外提供一个连接池名称和对应的path路径，讲这些信息提供给MyBatis，就可以达到MyBatis实现外部
+                连接池的目的。
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+                <!--poolMaximumActiveConnections：表示最多可以存在多少个连接对象处于活动状态，默认是10-->
+                <property name="poolMaximumActiveConnections" value="3"/>
+                <!--poolTimeToWait：用于配置每隔多少秒打印一次日志，为了避免连接对象一直获取不到日志不打印出现的问题，默认是20秒
+                    并且尝试连接。
+                -->
+                <property name="poolTimeToWait" value="2000"/>
+                <!--强行让某个连接过时，超时设置。-->
+                <property name="poolMaximumCheckoutTime" value="10000"/>
+                <!--连接池最多空闲数量，用于提高连接池的效率.这里就是做多空闲5个，如果超过5个，就直接将多余的删除掉-->
+                <property name="poolMaximumIdleConnections" value="5"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="StudentMapper.xml"/>
+    </mappers>
+</configuration>
