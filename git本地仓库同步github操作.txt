@@ -1,0 +1,20 @@
+第一步：
+	初始化本地git
+		git init
+第二步：
+	将要提交的数据添加到暂存区中
+		git add "需要添加的文件"
+		查看状态
+			git status
+第三步：
+	将暂存区的数据提交到本地仓库中
+		git commit -m "这里是解释性语句"
+第四步：
+	连接远程仓库
+		git remote add origin git@github:2022zhang125/Git.git
+第五步：
+	将远程仓库的东西先拉取到本地，然后在统一的提交
+	拉取到本地：
+		git pull --rebase origin master
+	统一的提交：
+		git push origin master
