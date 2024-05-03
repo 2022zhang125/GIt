@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hbsfdxwlxy.competition.mapper.DMSUserMapper">
+    <select id="selectUserByName" resultType="com.hbsfdxwlxy.competition.pojo.User">
+        select username,password from t_user where username = #{username};
+    </select>
+
+    <insert id="insertUser" parameterType="com.hbsfdxwlxy.competition.pojo.User">
+        insert into t_user(username,password) values(#{user.username},#{user.password});
+    </insert>
+</mapper>
